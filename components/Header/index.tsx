@@ -8,7 +8,7 @@ const Header: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.info}>
-        <SubHeading title="Chase the new flavour" />
+        <SubHeading title="Chase the new flavour" alignImage="start" />
         <h1 className={styles.header}>The Key to Fine Dining</h1>
         <p className={styles.description}>
           It is a long established fact that a reader will be distracted by the
