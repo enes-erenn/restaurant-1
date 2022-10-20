@@ -10,9 +10,7 @@ interface Props {
 const SubHeading: React.FC<Props> = ({ title, alignImage }) => {
   return (
     <div style={{ marginBottom: "1rem" }}>
-      <p style={{ marginBottom: "0", fontSize: "1.5rem", textAlign: "center" }}>
-        {title}
-      </p>
+      <p style={{ marginBottom: "0", fontSize: "1.5rem" }}>{title}</p>
       <div
         style={{
           width: "100% ",
