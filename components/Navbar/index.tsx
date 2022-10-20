@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
+import Logo from "../../assets/images/logo.png";
 import styles from "./Navbar.module.scss";
 
 const Navbar: React.FC = () => {
@@ -12,8 +13,9 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.container}>
       {/********** LOGO **********/}
-      <div className={styles.logo}>
-        <Image src="" alt="Logo" width="100" height="60" />
+
+      <div>
+        <Image src={Logo} alt="Logo" width="130" height="130" />
       </div>
       {/********** LIST **********/}
       <ul className={styles.list}>

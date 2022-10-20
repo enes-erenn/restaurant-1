@@ -8,13 +8,14 @@ $golden: #fae588;
   justify-content: space-between;
   align-items: center;
   background-color: $dark;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   color: white;
+  height: 12vh;
 
   .list {
     display: flex;
     flex: 1;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     list-style: none;
 
