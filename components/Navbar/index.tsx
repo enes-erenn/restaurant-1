@@ -13,10 +13,10 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.container}>
       {/********** LOGO **********/}
-
       <div>
         <Image src={Logo} alt="Logo" width="130" height="130" />
       </div>
+
       {/********** LIST **********/}
       <ul className={styles.list}>
         <li className={styles.list_item}>
