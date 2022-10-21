@@ -1,0 +1,40 @@
+$dark: #0a0908;
+$gray: #ccc5b9;
+$golden: #fae588;
+
+.container {
+  width: 90%;
+  height: 90vh;
+  position: relative;
+  margin: 6rem auto;
+
+  .video {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 1px solid $golden;
+      cursor: pointer;
+    }
+  }
+}
