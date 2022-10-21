@@ -3,6 +3,7 @@ import AboutUs from "../components/AboutUs";
 import Chef from "../components/Chef";
 import Header from "../components/Header";
 import Intro from "../components/Intro";
+import Laurels from "../components/Laurels";
 import Menu from "../components/Menu";
 import Navbar from "../components/Navbar";
 
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <Menu />
       <Chef />
       <Intro />
+      <Laurels />
     </>
   );
 };

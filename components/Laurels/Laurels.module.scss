@@ -1,0 +1,44 @@
+$dark: #0a0908;
+$gray: #ccc5b9;
+$golden: #fae588;
+
+.container {
+  width: 90%;
+  margin: 6rem auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  .awards {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 2rem;
+  }
+  .award {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+
+    .award_title {
+      color: $golden;
+      margin: 0;
+    }
+  }
+  .header {
+    color: $golden;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .awards {
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+  }
+}

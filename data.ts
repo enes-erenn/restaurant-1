@@ -1,3 +1,7 @@
+import award1 from "./assets/images/award01.png";
+import award2 from "./assets/images/award02.png";
+import award3 from "./assets/images/award03.png";
+
 interface Wines {
   title: string;
   price: string;
@@ -11,6 +15,7 @@ interface Cocktails {
 interface Awards {
   title: string;
   subtitle: string;
+  image: any;
 }
 
 export const wines: Wines[] = [
@@ -73,18 +78,22 @@ export const awards: Awards[] = [
   {
     title: "Bib Gourmond",
     subtitle: "Lorem ipsum dolor sit amet, consectetur.",
+    image: award1,
   },
   {
     title: "Rising Star",
     subtitle: "Lorem ipsum dolor sit amet, consectetur.",
+    image: award2,
   },
   {
     title: "AA Hospitality",
     subtitle: "Lorem ipsum dolor sit amet, consectetur.",
+    image: award1,
   },
   {
     title: "Outstanding Chef",
     subtitle: "Lorem ipsum dolor sit amet, consectetur.",
+    image: award3,
   },
 ];
 
