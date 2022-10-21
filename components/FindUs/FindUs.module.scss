@@ -26,4 +26,17 @@ $golden: #fae588;
     text-align: center;
     color: $golden;
   }
+
+  .googleMap {
+    width: 70%;
+    height: 24rem;
+    margin: 2rem auto;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .googleMap {
+    width: 100% !important;
+  }
 }

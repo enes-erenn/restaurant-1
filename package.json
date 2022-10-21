@@ -9,12 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.13.1",
+    "googlemaps": "^1.12.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0"
   },
   "devDependencies": {
+    "@types/google.maps": "^3.50.4",
+    "@types/googlemaps": "^3.43.3",
     "@types/node": "18.11.2",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
