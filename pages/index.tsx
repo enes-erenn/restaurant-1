@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import AboutUs from "../components/AboutUs";
 import Chef from "../components/Chef";
+import Gallery from "../components/Gallery";
 import Header from "../components/Header";
 import Intro from "../components/Intro";
 import Laurels from "../components/Laurels";
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       <Chef />
       <Intro />
       <Laurels />
+      <Gallery />
     </>
   );
 };

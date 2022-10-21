@@ -1,6 +1,10 @@
 import award1 from "./assets/images/award01.png";
 import award2 from "./assets/images/award02.png";
 import award3 from "./assets/images/award03.png";
+import gallery1 from "./assets/images/gallery1.png";
+import gallery2 from "./assets/images/gallery2.png";
+import gallery3 from "./assets/images/gallery3.png";
+import gallery4 from "./assets/images/gallery4.png";
 
 interface Wines {
   title: string;
@@ -97,10 +101,4 @@ export const awards: Awards[] = [
   },
 ];
 
-/* const exportedObject = {
-  wines: Wines[];
-  cocktails: Cocktails[];
-  awards: Awards[];
-};
-
-export default exportedObject; */
+export const images = [gallery1, gallery2, gallery3, gallery4];

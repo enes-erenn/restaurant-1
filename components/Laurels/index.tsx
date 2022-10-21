@@ -9,7 +9,7 @@ const Laurels = () => {
   return (
     <div className={styles.container}>
       <div className={styles.info}>
-        <SubHeading title="Awards & recognition" alignImage="center" />
+        <SubHeading title="Awards & Recognition" alignImage="center" />
         <h1 className={styles.header}>Our Laurels</h1>
       </div>
       <div className={styles.awards}>
