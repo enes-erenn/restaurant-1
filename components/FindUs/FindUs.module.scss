@@ -1,0 +1,29 @@
+$dark: #0a0908;
+$gray: #ccc5b9;
+$golden: #fae588;
+
+.container {
+  width: 90%;
+  margin: 12rem auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .title {
+    color: $golden;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .hours {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header {
+    text-align: center;
+    color: $golden;
+  }
+}
