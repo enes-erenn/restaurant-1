@@ -3,7 +3,7 @@ import { BsFillPlayFill, BsPauseFill } from "react-icons/bs";
 import Video from "../../assets/videos/meal.mp4";
 import styles from "./Intro.module.scss";
 
-const Intro: React.FC = () => {
+const Intro = () => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const videoRef = useRef() as
     | React.MutableRefObject<HTMLVideoElement>

@@ -4,7 +4,7 @@ import SubHeading from "../SubHeading";
 import BBQ from "../../assets/images/bbq.png";
 import styles from "./Header.module.scss";
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.info}>

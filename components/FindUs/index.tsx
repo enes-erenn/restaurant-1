@@ -8,7 +8,7 @@ const FindUs = () => {
       <SubHeading title="Contact" alignImage="center" />
       <h1 className={styles.header}>Find Us</h1>
       <div className={styles.info}>
-        <p>
+        <p style={{ textAlign: "center" }}>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa alias
           minus quod ratione quo quasi facilis quae tenetur fugiat dolores eum
           ex, praesentium quisquam iste sint. Officia dolorum neque rerum.

@@ -7,7 +7,7 @@ import ChefImage from "../../assets/images/chef.png";
 import Signature from "../../assets/images/signature.png";
 import styles from "./Chef.module.scss";
 
-const Chef: React.FC = () => {
+const Chef = () => {
   return (
     <div className={styles.container}>
       <div

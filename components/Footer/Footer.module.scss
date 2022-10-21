@@ -1,0 +1,61 @@
+$dark: #0a0908;
+$gray: #ccc5b9;
+$golden: #fae588;
+
+.container {
+  width: 90%;
+  color: white;
+  margin: 12rem auto 2rem auto;
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .icons {
+      color: white;
+      transition: all ease 0.5s;
+
+      &:hover {
+        color: $golden;
+      }
+    }
+  }
+  .infos {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .headers {
+      color: $golden;
+    }
+  }
+  .logo {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .copyright {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .info {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
+  }
+}

@@ -6,7 +6,7 @@ import MenuItem from "./MenuItem";
 import WineAndBeer from "../../assets/images/wine_and_beer.png";
 import styles from "./Menu.module.scss";
 
-const Menu: React.FC = () => {
+const Menu = () => {
   return (
     <div className={styles.container}>
       <SubHeading title="Menu That Fits You Palatte" alignImage="center" />

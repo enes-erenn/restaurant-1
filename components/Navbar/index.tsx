@@ -6,7 +6,7 @@ import { MdOutlineRestaurantMenu } from "react-icons/md";
 import Logo from "../../assets/images/logo.png";
 import styles from "./Navbar.module.scss";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   // Toggles the menu for small screens
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 

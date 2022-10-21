@@ -4,7 +4,7 @@ import Logo from "../../assets/images/logo.png";
 import SpatulaVertical from "../../assets/images/spatula_vertical.png";
 import styles from "./AboutUs.module.scss";
 
-const AboutUs: React.FC = () => {
+const AboutUs = () => {
   return (
     <div style={{ position: "relative" }}>
       <div
