@@ -7,7 +7,9 @@ const FindUs = () => {
   return (
     <div className={styles.container} id="contact">
       <SubHeading title="Contact" alignImage="center" />
-      <h1 className={styles.header}>Find Us</h1>
+      <h1 className={styles.header} data-aos="zoom-out-up">
+        Find Us
+      </h1>
       <div className={styles.info}>
         <p style={{ textAlign: "center" }}>
           9W 55rd St. New York, NY 10012, USA
@@ -18,7 +20,7 @@ const FindUs = () => {
           <span>Sat - Sun 11:00 AM - 03:00 AM</span>
         </div>
       </div>
-      <div className={styles.googleMap}>
+      <div className={styles.googleMap} data-aos="fade-zoom-in">
         <GoogleMaps coords={{ lat: 40.712776, lng: -74.005974 } as any} />
       </div>
     </div>

@@ -11,6 +11,8 @@ const Chef = () => {
   return (
     <div className={styles.container}>
       <div
+        data-aos="fade-right"
+        data-aos-delay="150"
         style={{
           position: "relative",
           width: "90%",
@@ -20,7 +22,7 @@ const Chef = () => {
       >
         <Image src={ChefImage} alt="Chef" layout="fill" objectFit="contain" />
       </div>
-      <div>
+      <div data-aos="zoom-out-up">
         <div className={styles.word}>
           <SubHeading title="Chef's Word" alignImage="start" />
         </div>
@@ -59,6 +61,8 @@ const Chef = () => {
         <div
           className={styles.sign}
           style={{ position: "relative", width: "30%", height: "auto" }}
+          data-aos="fade-left"
+          data-aos-delay="250"
         >
           <Image src={Signature} alt="Signature" objectFit="contain" />
         </div>

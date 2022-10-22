@@ -39,8 +39,10 @@ const Gallery = () => {
   return (
     <>
       <div className={styles.container}>
-        <h1 className={styles.header}>Gallery</h1>
-        <div className={styles.gallery}>
+        <h1 className={styles.header} data-aos="zoom-out-up">
+          Gallery
+        </h1>
+        <div className={styles.gallery} data-aos="flip-up">
           {gallery.map((item: any, i) => (
             <div
               className={styles.image}

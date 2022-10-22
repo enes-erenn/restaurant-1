@@ -23,7 +23,11 @@ const AboutUs = () => {
         <Image src={Logo} width="200" height="200" alt="Logo" />
       </div>
       <div className={styles.container}>
-        <div className={styles.aboutUs}>
+        <div
+          className={styles.aboutUs}
+          data-aos="fade-right"
+          data-aos-delay="150"
+        >
           <h1 className={styles.header}>About Us</h1>
           {isShortAboutUs ? (
             <p>
@@ -61,6 +65,7 @@ const AboutUs = () => {
         <div
           className={styles.image}
           style={{ position: "relative", width: "100%", height: "auto" }}
+          data-aos="fade-up"
         >
           <Image
             src={SpatulaVertical}
@@ -69,7 +74,11 @@ const AboutUs = () => {
             objectFit="contain"
           />
         </div>
-        <div className={styles.ourHistory}>
+        <div
+          className={styles.ourHistory}
+          data-aos="fade-left"
+          data-aos-delay="150"
+        >
           <h1 className={styles.header}>Our History</h1>
           {isShortHistory ? (
             <p>

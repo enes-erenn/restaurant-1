@@ -8,7 +8,7 @@ import styles from "./Laurels.module.scss";
 const Laurels = () => {
   return (
     <div className={styles.container} id="awards">
-      <div className={styles.info}>
+      <div className={styles.info} data-aos="zoom-out-up">
         <SubHeading title="Awards & Recognition" alignImage="center" />
         <h1 className={styles.header}>Our Laurels</h1>
       </div>

@@ -12,6 +12,10 @@ const SubHeading: React.FC<Props> = ({ title, alignImage }) => {
     <div style={{ marginBottom: "1rem" }}>
       <p style={{ marginBottom: "0", fontSize: "1.5rem" }}>{title}</p>
       <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        data-delay="200"
         style={{
           width: "100% ",
           display: "flex",

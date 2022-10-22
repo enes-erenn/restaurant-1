@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import AboutUs from "../components/AboutUs";
@@ -10,8 +11,15 @@ import Intro from "../components/Intro";
 import Laurels from "../components/Laurels";
 import Menu from "../components/Menu";
 import Navbar from "../components/Navbar";
+import aos from "aos";
+import "aos/dist/aos.css";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    aos.init({ offset: 120, duration: 400, easing: "ease" });
+    aos.refresh();
+  }, []);
+
   return (
     <>
       <Head>
