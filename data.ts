@@ -101,4 +101,13 @@ export const awards: Awards[] = [
   },
 ];
 
-export const images = [gallery1, gallery2, gallery3, gallery4];
+export const images = [
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+];

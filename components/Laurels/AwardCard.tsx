@@ -24,4 +24,4 @@ const AwardCard: React.FC<Props> = ({ award }) => {
   );
 };
 
-export default AwardCard;
+export default React.memo(AwardCard);

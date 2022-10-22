@@ -7,7 +7,7 @@ import styles from "./Laurels.module.scss";
 
 const Laurels = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="awards">
       <div className={styles.info}>
         <SubHeading title="Awards & Recognition" alignImage="center" />
         <h1 className={styles.header}>Our Laurels</h1>
@@ -16,9 +16,6 @@ const Laurels = () => {
         {awards.map((item) => (
           <AwardCard award={item} key={item.title} />
         ))}
-      </div>
-      <div>
-        <Image src="" alt="" />
       </div>
     </div>
   );

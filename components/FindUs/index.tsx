@@ -5,7 +5,7 @@ import styles from "./FindUs.module.scss";
 
 const FindUs = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="contact">
       <SubHeading title="Contact" alignImage="center" />
       <h1 className={styles.header}>Find Us</h1>
       <div className={styles.info}>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -7,11 +7,29 @@ import Logo from "../../assets/images/logo.png";
 import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
+  const [isFixed, setIsFixed] = useState<boolean>(false);
   // Toggles the menu for small screens
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
+  const handleFixNavbar = () => {
+    if (window.scrollY >= 200) {
+      setIsFixed(true);
+    } else {
+      setIsFixed(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleFixNavbar);
+  });
+
   return (
-    <nav className={styles.container}>
+    <nav
+      className={
+        !isFixed ? `${styles.container}` : `${styles.container} ${styles.fixed}`
+      }
+      /*    className={styles.fixed} */
+    >
       {/********** LOGO **********/}
       <div>
         <Image src={Logo} alt="Logo" width="130" height="130" />
@@ -20,19 +38,19 @@ const Navbar = () => {
       {/********** LIST **********/}
       <ul className={styles.list}>
         <li className={styles.list_item}>
-          <Link href="/">Home</Link>
+          <a href="#">Home</a>
         </li>
         <li className={styles.list_item}>
-          <Link href="/about">About</Link>
+          <a href="#about">About</a>
         </li>
         <li className={styles.list_item}>
-          <Link href="/menu">Menu</Link>
+          <a href="#menu">Menu</a>
         </li>
         <li className={styles.list_item}>
-          <Link href="/awards">Awards</Link>
+          <a href="#awards">Awards</a>
         </li>
         <li className={styles.list_item}>
-          <Link href="/contact">Contact</Link>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
       {/********** SMALL SCREEN  **********/}
@@ -56,19 +74,19 @@ const Navbar = () => {
             {/********** SMALL SCREEN LIST **********/}
             <ul className={styles.small_screen_list}>
               <li className={styles.list_item}>
-                <Link href="/">Home</Link>
+                <a href="#">Home</a>
               </li>
               <li className={styles.list_item}>
-                <Link href="/about">About</Link>
+                <a href="#about">About</a>
               </li>
               <li className={styles.list_item}>
-                <Link href="/menu">Menu</Link>
+                <a href="#menu">Menu</a>
               </li>
               <li className={styles.list_item}>
-                <Link href="/awards">Awards</Link>
+                <a href="#awards">Awards</a>
               </li>
               <li className={styles.list_item}>
-                <Link href="/contact">Contact</Link>
+                <a href="#contact">Contact</a>
               </li>
             </ul>
           </div>

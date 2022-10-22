@@ -2,12 +2,31 @@ $dark: #0a0908;
 $gray: #ccc5b9;
 $golden: #fae588;
 
-.container {
+.fixed {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $dark;
+  padding: 0 2rem;
+  color: white;
+  height: 10vh !important;
+  position: fixed;
+  transition: all ease 0.5s;
+  z-index: 5;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: $dark !important;
+}
+
+.container {
+  z-index: 5;
+  transition: all ease 0.5s;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: transparent;
   padding: 0 2rem;
   color: white;
   height: 12vh;

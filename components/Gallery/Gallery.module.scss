@@ -10,6 +10,24 @@ $golden: #fae588;
   margin: 12rem auto;
   flex-direction: column;
 
+  .button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-family: "Cormorant Upright", sans-serif;
+    font-size: 1rem;
+    transition: all ease 0.5s;
+    border-radius: 2px;
+    width: 6rem;
+    height: 2rem;
+    margin: 2rem auto;
+    &:hover {
+      background-color: white;
+      color: $dark;
+    }
+  }
+
   .header {
     text-align: center;
     color: $golden;
@@ -37,7 +55,8 @@ $golden: #fae588;
         z-index: 6;
       }
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
+        z-index: 3;
       }
 
       &:hover .zoomIn {
@@ -56,6 +75,44 @@ $golden: #fae588;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
+
+  .button_next {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    color: #fff;
+    transition: all ease 0.5s;
+    transform: translate(-10%, -50%);
+    &:hover {
+      color: $golden !important;
+    }
+  }
+
+  .button_back {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: #fff;
+    transition: all ease 0.5s;
+    transform: translate(-10%, -50%);
+    &:hover {
+      color: $golden !important;
+    }
+  }
 
   .close {
     position: absolute;
@@ -76,5 +133,18 @@ $golden: #fae588;
 @media only screen and (max-width: 768px) {
   .gallery {
     justify-content: center !important;
+  }
+  .button_next {
+    right: 0 !important;
+    width: 5rem !important;
+    height: 5rem !important;
+    transform: translate(0, -50%) !important;
+  }
+
+  .button_back {
+    left: 0 !important;
+    transform: translate(0, -50%) !important;
+    width: 5rem !important;
+    height: 5rem !important;
   }
 }

@@ -1,25 +1,53 @@
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import React, { useState } from "react";
 import { images } from "../../data";
 import Modal from "./Modal";
 import { HiMagnifyingGlassPlus } from "react-icons/hi2";
 import styles from "./Gallery.module.scss";
 
+interface Image {
+  src: string;
+  width: number;
+  height: number;
+  blurDataURL?: string;
+  blurHeight?: number;
+  blurWidth?: number;
+}
+
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<HTMLImageElement | null>(
-    null
-  );
+  const [gallery, setGallery] = useState<Image[]>([]);
+  const [counter, setCounter] = useState(4);
+  const [selectedImage, setSelectedImage] = useState<
+    HTMLImageElement | null | Image
+  >(null);
+
+  useEffect(() => {
+    let galleryArray = [] as Image[];
+    const addToGallery = (count: number) => {
+      for (let i = 0; i < count; i++) {
+        galleryArray.push(images[i]);
+      }
+    };
+
+    addToGallery(counter);
+    setGallery(galleryArray);
+    return () => {
+      galleryArray = [];
+    };
+  }, [counter]);
 
   return (
     <>
       <div className={styles.container}>
         <h1 className={styles.header}>Gallery</h1>
         <div className={styles.gallery}>
-          {images.map((item, i) => (
+          {gallery.map((item: any, i) => (
             <div
               className={styles.image}
               key={`${item}` + i}
-              onClick={() => setSelectedImage(item)}
+              onClick={() => {
+                setSelectedImage(item);
+              }}
             >
               <HiMagnifyingGlassPlus
                 color="#fff"
@@ -27,15 +55,45 @@ const Gallery = () => {
                 className={styles.zoomIn}
                 style={{ display: "none" }}
               />
-              <Image src={item} alt="Photos" width="300" height="200" />
+              <div
+                style={{
+                  width: "20rem",
+                  height: "12rem",
+                  position: "relative",
+                }}
+              >
+                <Image
+                  src={item}
+                  alt="Photos"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
             </div>
           ))}
         </div>
+        {images.length !== gallery.length && (
+          <button
+            className={styles.button}
+            onClick={() => {
+              if (counter + 4 > images.length) {
+                setCounter(
+                  (prevCounter) => prevCounter + (images.length % prevCounter)
+                );
+              } else {
+                setCounter((prevCounter) => prevCounter + 4);
+              }
+            }}
+          >
+            More
+          </button>
+        )}
       </div>
       <Modal
         image={selectedImage}
+        images={images}
         setSelectedImage={(
-          state: React.SetStateAction<HTMLImageElement | null>
+          state: React.SetStateAction<HTMLImageElement | null | Image>
         ) => setSelectedImage(state)}
       />
     </>

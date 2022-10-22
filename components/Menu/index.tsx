@@ -8,7 +8,7 @@ import styles from "./Menu.module.scss";
 
 const Menu = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="menu">
       <SubHeading title="Menu That Fits You Palatte" alignImage="center" />
       <h1 className={styles.header}>Today&apos;s Special</h1>
       <div className={styles.wrapper}>

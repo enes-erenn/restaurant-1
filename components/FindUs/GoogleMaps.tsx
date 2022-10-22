@@ -19,15 +19,11 @@ const GoogleMaps: React.FC<Props> = ({ coords }) => {
 
   return (
     <LoadScript googleMapsApiKey={apiKey}>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={coords as GoogleLatLng}
-        zoom={17}
-      >
-        <Marker position={coords as GoogleLatLng} />
+      <GoogleMap mapContainerStyle={containerStyle} center={coords} zoom={17}>
+        <Marker position={coords} />
       </GoogleMap>
     </LoadScript>
   );
 };
 
-export default GoogleMaps;
+export default React.memo(GoogleMaps);
