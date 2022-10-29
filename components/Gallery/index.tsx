@@ -93,7 +93,7 @@ const Gallery = () => {
       </div>
       <Modal
         image={selectedImage}
-        images={images}
+        images={gallery}
         setSelectedImage={(
           state: React.SetStateAction<HTMLImageElement | null | Image>
         ) => setSelectedImage(state)}

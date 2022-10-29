@@ -23,11 +23,11 @@ interface Image {
 
 const Modal: React.FC<Props> = ({ image, setSelectedImage, images }) => {
   const [index, setIndex] = useState<number | null>(null);
-
+  console.log(index);
   // Sets the image to the modal
   const handleChangeImage = (e: any, type: "back" | "next") => {
     e.stopPropagation();
-    if (index) {
+    if (index !== null) {
       // Sets the image
       setSelectedImage(type === "back" ? images[index - 1] : images[index + 1]);
     }
@@ -86,7 +86,7 @@ const Modal: React.FC<Props> = ({ image, setSelectedImage, images }) => {
             }
             onClick={(e) => {
               e.stopPropagation();
-              if (index !== images.length - 1) {
+              if (index !== images.length) {
                 handleChangeImage(e, "next");
               }
             }}
